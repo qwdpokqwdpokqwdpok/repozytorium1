@@ -8,7 +8,8 @@ let slowa a =
   let n = Array.length a in
     try
       Array.iter (fun x -> if x = 'a' then raise Exit else (if x = 'b' then wynik := 1)) a;
-      0;
+      !wynik,
+      res2;
     with Exit ->
   wynik := !wynik + 1;
   while !x < n do
@@ -21,4 +22,5 @@ let slowa a =
         y := !y + 1);
         x := !x + 1
   done;
-  !wynik;;
+  !wynik,
+  res2;;
