@@ -7,11 +7,10 @@ let slowa a =
   let y = ref 0 in
   let n = Array.length a in
     try
-      Array.iter (fun x -> if x = 'a' then raise Exit else (if x = 'b' then wynik := 1)) a;
+      Array.iter (fun x -> if x = 'a' then (wynik := 1; raise Exit) else (if x = 'b' then wynik := 1)) a;
       !wynik,
       res2;
     with Exit ->
-  wynik := !wynik + 1;
   while !x < n do
     if a.(!x) = !res1.(!y) then (
       if ((Array.length !res1) = (!y + 1)) then (
