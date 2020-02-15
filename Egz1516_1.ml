@@ -12,7 +12,7 @@ let kulki l =
       if miejsce < koniec then
         if parzystosc = 0 then
           if k = Zielona then (1, miejsce + 1, licznik)
-          else (1, miejsce + 1, licznik + 1)
+          else (1, miejsce + 1, licznik)
         else if k = Zielona then (0, miejsce + 1, licznik + 1)
           else (0, miejsce + 1, licznik)
       else if k = Zielona && kolor_zakonczenia = Czerwona then (0, miejsce + 1, licznik +1)
