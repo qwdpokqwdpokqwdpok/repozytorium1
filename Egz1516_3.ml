@@ -10,13 +10,13 @@ let gaz arr =
   let flag = ref true in
   while !flag do
     let odwiedzone = Array.make_matrix n m false in
-    for i = 0 to n do
-      for j = 0 to m do
-        if arr.(i).(j) < 0 then
+    for i = 0 to n - 1 do
+      for j = 0 to m - 1 do
+        if arr.(i).(j) < 0 then (
         Queue.add (i,j) kolejka;
         odwiedzone.(i).(j) <- true;
         wynik := !wynik + 1;
-        arr.(i).(j) <- arr.(i).(j) + 1;
+        arr.(i).(j) <- arr.(i).(j) + 1;)
       done;
     done;
     if Queue.is_empty kolejka then flag := false;
