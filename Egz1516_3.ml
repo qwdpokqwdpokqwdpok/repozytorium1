@@ -1,6 +1,6 @@
 (*let dupa = Array.init i (fun _ -> Array.init j (fun _ -> (Array.make k 0))) 
   let odwierty = Array.init n (fun i -> Array.init m (fun j -> if arr.(i).(j) < 0 then 1 else 0))
-  let mapa = Array.copy arr *)
+  let kopia = Array.copy arr *)
 
 let gaz arr =
   let n = Array.length arr in
