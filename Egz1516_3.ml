@@ -20,7 +20,7 @@ let gaz arr =
       done;
     done;
     if Queue.is_empty kolejka then flag := false;
-    while not Queue.is_empty kolejka do
+    while not (Queue.is_empty kolejka) do
       let (x, y) = Queue.take kolejka in
       let check (a, b) =
         arr.(a).(b) > 0 && not odwiedzone.(a).(b) in
@@ -31,7 +31,7 @@ let gaz arr =
         arr.(a).(b) <- arr.(a).(b) - 1; in
       if x > 0 then if check (x - 1, y) then dodawaj (x - 1, y);
       if x < n - 1 then if check (x + 1, y) then dodawaj (x + 1, y);
-      if y > 0 then id check (x, y - 1) then dodawaj (x, y - 1);
+      if y > 0 then if check (x, y - 1) then dodawaj (x, y - 1);
       if y < m - 1 then if check (x, y + 1) then dodawaj (x, y + 1);
     done;
   done;
