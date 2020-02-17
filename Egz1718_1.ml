@@ -35,6 +35,6 @@ let kalkulator lista =
       | Nawias_Zam -> zam (a::b))
     [(0,0,0,0,0)]
     lista in
-  match wynik with 
+  match wynik with [(x, 0, 0, 0, 0)] -> x;;
   
 
