@@ -16,3 +16,4 @@ te kilka punktow po drodze moglo byc mniejszych od tego, w ktorym teraz stoisz
 reszta na prawo jest wieksza
 szukasz w prawej albo lewej polowie
 ale co jezeli cos jest mniejsze od 1 i wieksze od 2 punktu
+
