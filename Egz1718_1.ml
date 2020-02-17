@@ -22,17 +22,19 @@ let kalkulator lista =
   let otw = function
     | l -> (0,0,0,0,0)::l in
   let zam = function
-    | a::b::c -> (b wykonaj a)::c
+    | a::b::c -> (wykonaj b a)::c in
+  let wynik =
   List.fold_left
     (fun (a::b) s -> match s with
-      | Liczba x -> (wykonaj x a)::b
+      | Liczba x -> (wykonaj a (x, 0, 0, 0, 0))::b
       | Plus -> (plus a)::b
-      | Minus -> (mius a)::b
+      | Minus -> (minus a)::b
       | Razy -> (razy a)::b
-      | Podzielic -> (podz a)::b
-      | Nawias_Otw -> otw a::b
-      | Nawias_Zam -> zam a::b)
+      | Podziel -> (podz a)::b
+      | Nawias_Otw -> otw (a::b)
+      | Nawias_Zam -> zam (a::b))
     [(0,0,0,0,0)]
-    lista;;
+    lista in
+  match wynik with 
   
 
