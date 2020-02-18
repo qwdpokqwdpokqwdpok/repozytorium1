@@ -1,3 +1,4 @@
+(* subset sum problem *)
 let energia k t e =
   let n = Array.length t in
   if k > n then [||] else
