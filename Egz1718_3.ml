@@ -26,13 +26,13 @@ let energia k t e =
         pocz := !pocz + 1;
       done;
       if !znaleziono then
-        (!pocz, !kon, true) else
-      (-1, -1, false) else
+        [|!pocz; !kon; -1|] else
+      [|-2; -2; -2|] else
     let wyniki =
       Array.init (n - 1)
         (fun i ->
           check (zmien_tablice arr i) (suma - arr.(i)) (ile_liczb - 1)) in
-    Array.fold left
+    Array.fold_left (fun 
   
   
   
